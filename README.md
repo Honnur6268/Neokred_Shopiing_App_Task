@@ -14,13 +14,13 @@ hit the url to open the swagger-ui - http://localhost:8080/swagger-ui/index.html
 
 Rest Endpoints:
 
-   GET: http://localhost:8080/api/shop/customers
-   GET: http://localhost:8080/api/shop/products
-   GET: http://localhost:8080/api/shop/cart
-   GET: http://localhost:8080/api/shop/getorder{orderId}
-   POST: http://localhost:8080/api/shop/product
-   POST: http://localhost:8080/api/shop/placeorder
-   POST: http://localhost:8080/api/shop/customers
+   1. GET: http://localhost:8080/api/shop/customers
+   2. GET: http://localhost:8080/api/shop/products
+   3. GET: http://localhost:8080/api/shop/cart
+   4. GET: http://localhost:8080/api/shop/getorder{orderId}
+   5. POST: http://localhost:8080/api/shop/product
+   6. POST: http://localhost:8080/api/shop/placeorder
+   7. POST: http://localhost:8080/api/shop/customers
 
       
    
