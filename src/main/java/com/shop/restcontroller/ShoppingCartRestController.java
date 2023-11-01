@@ -92,12 +92,13 @@ public class ShoppingCartRestController {
 	@PostMapping("/placeorder")
 	public ResponseEntity<ResponseOrderDTO> placeOrder(@RequestBody OrderDTO orderDTO) {
 		logger.info("Request Payload " + orderDTO.toString());
+		
 		ResponseOrderDTO responseOrderDTO = new ResponseOrderDTO();
 		float amount = orderService.getCartAmount(orderDTO.getCartItems());
 		Order order = null;
-//		List<ShoppingCart> quantity = orderDTO.getCartItems().stream().filter(pid->pid.getQuantity() == 0).collect(Collectors.toList());
 		User customer = new User(orderDTO.getCustomerName(), orderDTO.getCustomerEmail());
 		Integer customerIdFromDb = customerService.isCustomerPresent(customer);
+		
 		if (customerIdFromDb != null) {
 			if (!orderDTO.getCartItems().stream().anyMatch(pid -> pid.getQuantity() == 0)) {
 				customer.setId(customerIdFromDb);
