@@ -91,7 +91,6 @@ public class ShoppingCartRestController {
 
 	@PostMapping("/placeorder")
 	public ResponseEntity<ResponseOrderDTO> placeOrder(@RequestBody OrderDTO orderDTO) {
-		logger.info("Request Payload " + orderDTO.toString());
 		
 		ResponseOrderDTO responseOrderDTO = new ResponseOrderDTO();
 		float amount = orderService.getCartAmount(orderDTO.getCartItems());
